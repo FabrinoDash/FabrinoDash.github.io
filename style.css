@@ -18,6 +18,7 @@ body{
 .timeDiv{
     width:200px;
     height:100px;
+    margin:auto;
     background: black;
     border-radius: 20px;
     display: flex;
