@@ -9,14 +9,15 @@
 }
 body{
     background: greenyellow;
+    diplay:flex;
+    align-items:center;
+    justify-content:center;
 }
 .timeDiv{
     width:200px;
     height:100px;
     background: black;
-    position: fixed;
-    top:40%;
-    border-radius: 0 20px 20px 0 ;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
