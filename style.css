@@ -1,0 +1,35 @@
+@font-face {
+    font-family: tech;
+    src: url(./techBold.ttf);
+}
+*,body{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background: greenyellow;
+}
+.timeDiv{
+    width:200px;
+    height:100px;
+    background: black;
+    position: fixed;
+    top:40%;
+    border-radius: 0 20px 20px 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.timeDiv p{
+    color:greenyellow;
+    font-weight: 900;
+    font-size: 2.5em;
+    font-family: tech;
+    letter-spacing: 5px;
+}
+#message{
+    font-size: 1em;
+    color:green;
+}
