@@ -15,6 +15,8 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -76,9 +78,44 @@ header .timeDiv p#message {
 }
 
 main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 30px;
   font-family: Arial, Helvetica, sans-serif;
+}
+main .home {
+  display: block;
+}
+main .home h1 {
+  text-align: center;
+}
+main .about {
+  display: none;
+}
+main .contacts {
+  display: none;
+}
+main .store {
+  position: relative;
+  display: none;
+  grid-template-columns: 100px auto;
+  min-height: 200px;
+  max-height: 600px;
+  overflow-y: scroll;
+  margin: 30px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+main .store .side {
+  background-color: rgb(57, 57, 57);
+}
+main .store .side ul li {
+  padding: 10px 0;
+  text-align: center;
+  margin: 5px;
+  background: rgb(85, 83, 83);
+  border-radius: 5px;
+  color: white;
+  list-style: none;
+}
+main .store .content {
+  position: sticky;
+  top: 0;
 }/*# sourceMappingURL=style.css.map */
