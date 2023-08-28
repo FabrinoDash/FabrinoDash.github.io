@@ -1,38 +1,4 @@
 window.addEventListener('DOMContentLoaded',()=>{
-    const homePage = document.getElementById('home');
-    const aboutPage = document.getElementById('about');
-    const contactsPage = document.getElementById('contacts');
-    const storePage = document.getElementById('store');
-
-    const homeBtn = document.getElementById('homeBtn');
-    const aboutBtn = document.getElementById('aboutBtn');
-    const contactsBtn = document.getElementById('contactBtn');
-    const storeBtn = document.getElementById('storeBtn');
-    
-    homeBtn.onclick = function(){
-        const showHide = new ShowHidePage("block","none","none","none");
-        showHide.showHide();
-        // const togg = new ClassToggler('active','','','');
-        // togg.togler();
-    }
-    aboutBtn.onclick = function(){
-        const showHide = new ShowHidePage("none","block","none","none");
-        showHide.showHide();
-        // const togg = new ClassToggler('','active','','');
-        // togg.togler();
-    }
-    contactsBtn.onclick = function(){
-        const showHide = new ShowHidePage("none","none","block","none");
-        showHide.showHide();
-        // const togg = new ClassToggler('','','active','');
-        // togg.togler();
-    }
-    storeBtn.onclick = function(){
-        const showHide = new ShowHidePage("none","none","none","grid");
-        showHide.showHide();
-        // const togg = new ClassToggler('','','','active');
-        // togg.togler();
-    }
     //time config and Display
     var time = document.getElementById('time');
     setInterval(()=>{
@@ -68,33 +34,20 @@ window.addEventListener('DOMContentLoaded',()=>{
         time.innerHTML=`${h}:${m}:${s}`;
     },1000);
 
-    // ALL CLASSES
-    class ShowHidePage{
-        constructor(homeDisplay,aboutDisplay,contactDisplay,storeDisplay){
-            this.homeDisplay=homeDisplay;
-            this.aboutDisplay=aboutDisplay;
-            this.contactDisplay=contactDisplay;
-            this.storeDisplay=storeDisplay;
-        }
-        showHide(){
-            homePage.style.display=this.homeDisplay;
-            aboutPage.style.display=this.aboutDisplay;
-            contactsPage.style.display=this.contactDisplay;
-            storePage.style.display=this.storeDisplay;
-        }
+    // OTHER CONFIG
+    const menuBar = document.getElementById('menu');
+    const nav_replace = document.getElementById('nav-replace');
+    const main = document.querySelector('main');
+    const closer = document.querySelector('.close-menu');
+
+    menuBar.onclick = function(){
+        nav_replace.style.right='0';
+        console.log(nav_replace);
     }
-    // class ClassToggler{
-    //     constructor(homeToglle,aboutToglle,contactToglle,storeToglle){
-    //         this.homeToglle=homeToglle;
-    //         this.aboutToglle=aboutToglle;
-    //         this.contactToglle=contactToglle;
-    //         this.storeToglle=storeToglle;
-    //     }
-    //     togler(){
-    //         homeBtn.classList.toggle(this.homeToglle);
-    //         aboutBtn.classList.toggle(this.aboutToglle);
-    //         contactsBtn.classList.toggle(this.contactToglle);
-    //         storeBtn.classList.toggle(this.storeToglle);
-    //     }
-    // }
+    main.onclick = ()=>close();
+    closer.onclick = ()=>close();
+
+    function close(){
+        nav_replace.style.right='-100%';
+    }
 });
