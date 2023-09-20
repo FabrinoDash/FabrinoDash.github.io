@@ -125,7 +125,7 @@ header .menu i {
 }
 .home .name {
   overflow: hidden;
-  width: 100px;
+  width: 800px;
   height: 300px;
   margin: 10px auto;
   display: flex;
