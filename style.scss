@@ -2,7 +2,13 @@
     font-family: tech;
     src: url(./techBold.ttf);
 }
+
+@font-face{
+    font-family: comfortaa;
+    src: url(./fonts/comfortaa/comfortaa.ttf);
+}
 $font:tech;
+$comfortaa:comfortaa;
 *,body{
     padding:0;
     margin:0;
@@ -22,55 +28,74 @@ header{
     background: rgb(255, 255, 255);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
     height: 70px;
-    overflow: hidden;
     margin: auto;
     transition: 0.2s ease-in-out;
     user-select: none;
     .nav{
-        margin-right: 30px;
         ul{
+            position: relative;
+            top: 0;
             a{
                 color: #333;
-                font-size: 1.5em;
+                font-size: 1.2em;
                 li{
                     width: 100px;
                     display: inline-block;
                     text-align: center;
-                    font-family: Arial, Helvetica, sans-serif;
+                    font-family:$comfortaa;
                     font-weight: 800;
                     cursor: pointer;
                     transition: 0.2s ease-in-out;
+                    .sub1{
+                        display: none;
+                        position: absolute;
+                        top: 50px;
+                        background: white;
+                        box-shadow: 0 0 2px 2px rgb(237, 237, 237);
+                        animation: slideUp 2s 0.1s ease;
+                        li{
+                            width: 200px;
+                            margin: 2px 0;
+                            padding: 10px 0;
+                            display: block;
+                            font-size: 0.7em;
+                        }
+                    }
                 }
                 li.active{
-                    color: green;
+                    color:grey;
+                }
+                li:hover .sub1{
+                    display: block;
                 }
                 li:hover{
-                    color: green;
+                    color: grey;
                 }
             }
         }
     }
     .timeDiv{
-        width:150px;
-        border: 2px solid white;
+        width:100px;
         margin-right:20px;
         padding: 10px 0;
-        background: rgba(0, 0, 0, 0.813);
+        background: white;
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        box-shadow: 0 0 2px 3px rgb(237, 237, 237);
         p#time{
-            color:white;
+            color: #333;
             font-weight: 900;
+            font-size: 0.7em;
             font-family: $font;
-            letter-spacing: 5px;
+            letter-spacing: 2px;
         }
         p#message{
-            font-size: 1em;
-            color:white;
-            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.5em;
+            color: #333;
+            font-family:$comfortaa;
         }
     }
     .nav-replace{
@@ -85,6 +110,8 @@ header{
         ul{
             a{
                 text-decoration: none;
+                position: absolute;
+
                 li{
                     list-style: none;
                     background: rgb(37, 37, 37);
@@ -94,7 +121,9 @@ header{
                     cursor: pointer;
                     color: white;
                     border-radius: 10px;
-                   
+                    .sub1{
+                        color: red;
+                    }
                 }
                 .close-menu{
                     color: red;
@@ -119,27 +148,12 @@ header{
 }
 .home{
     font-family: Arial, Helvetica, sans-serif;
-    width: 900px;
-    margin: 20px auto;
+    .spacer{
+        background-color: #333;
+        height: 10px;
+    }
     h1{
         text-align: center;
-    }
-    .name{
-        overflow: hidden;
-        width: 800px;
-        height: 300px;
-        margin: 10px auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2em;
-        font-weight: 900;
-        user-select: none;
-        color:  black;
-        font-weight: 900;
-        border:5px solid rgb(87, 86, 86);
-        border-radius: 10px;
-        background: url(./images/bg.png);
     }
 }
 .store{
@@ -177,7 +191,14 @@ header{
         }
     }
 }
-
+@keyframes slideUp{
+    0%{
+        top:100px;
+    }
+    100%{
+        top: 50px;
+    }
+}
 //##### RESPONSIVE DESIGN ##### 
 @media screen and (max-width:1024px){
 
