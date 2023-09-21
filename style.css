@@ -6,6 +6,18 @@
   font-family: comfortaa;
   src: url(./fonts/comfortaa/comfortaa.ttf);
 }
+@font-face {
+  font-family: anja-accent;
+  src: url(./fonts/anja_eliane/anja-accent.ttf);
+}
+@font-face {
+  font-family: anja;
+  src: url(./fonts/anja_eliane/anja.ttf);
+}
+@font-face {
+  font-family: sunshine;
+  src: url(./fonts/sunshine_10/Sunshine.otf);
+}
 *, body {
   padding: 0;
   margin: 0;
@@ -24,7 +36,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: right;
-  background: rgb(255, 255, 255);
+  background: #0b1015;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
   height: 70px;
   margin: auto;
@@ -38,7 +50,7 @@ header .nav ul {
   top: 0;
 }
 header .nav ul a {
-  color: #333;
+  color: #969696;
   font-size: 1.2em;
 }
 header .nav ul a li {
@@ -52,11 +64,11 @@ header .nav ul a li {
 }
 header .nav ul a li .sub1 {
   display: none;
+  border-radius: 5px;
   position: absolute;
-  top: 50px;
-  background: white;
-  box-shadow: 0 0 2px 2px rgb(237, 237, 237);
-  animation: slideUp 2s 0.1s ease;
+  top: 20px;
+  background: #0b1015;
+  box-shadow: 0 0 2px 2px #121921;
 }
 header .nav ul a li .sub1 li {
   width: 200px;
@@ -66,28 +78,28 @@ header .nav ul a li .sub1 li {
   font-size: 0.7em;
 }
 header .nav ul a li.active {
-  color: grey;
+  color: white;
 }
 header .nav ul a li:hover .sub1 {
   display: block;
 }
 header .nav ul a li:hover {
-  color: grey;
+  color: white;
 }
 header .timeDiv {
+  color: white;
   width: 100px;
   margin-right: 20px;
   padding: 10px 0;
-  background: white;
+  background: #0b1015;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 0 0 2px 3px rgb(237, 237, 237);
+  box-shadow: 0 0 2px 3px #121921;
 }
 header .timeDiv p#time {
-  color: #333;
   font-weight: 900;
   font-size: 0.7em;
   font-family: tech;
@@ -95,11 +107,11 @@ header .timeDiv p#time {
 }
 header .timeDiv p#message {
   font-size: 0.5em;
-  color: #333;
   font-family: comfortaa;
 }
 header .nav-replace {
   position: fixed;
+  z-index: 50;
   transition: 0.5s ease-in;
   top: 0;
   right: -100%;
@@ -114,16 +126,12 @@ header .nav-replace ul a {
 }
 header .nav-replace ul a li {
   list-style: none;
-  background: rgb(37, 37, 37);
   text-align: center;
   padding: 20px 0;
   margin: 10px;
   cursor: pointer;
   color: white;
   border-radius: 10px;
-}
-header .nav-replace ul a li .sub1 {
-  color: red;
 }
 header .nav-replace ul a .close-menu {
   color: red;
@@ -149,8 +157,53 @@ header .menu i {
   background-color: #333;
   height: 10px;
 }
-.home h1 {
+.home .clipped {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: 300px;
+  background: #333;
+  -webkit-clip-path: polygon(0% 0%, 100% 30%, 100% 100%, 0% 70%);
+          clip-path: polygon(0% 0%, 100% 30%, 100% 100%, 0% 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.home .clipped h2 {
+  font-size: 2em;
+  font-family: anja-accent;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.home .clipped span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .clipped span .tag {
+  font-size: 0.9em;
+  color: white;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  background: #383838;
+  font-family: anja;
+}
+.home .belowClip {
+  height: 300px;
+  background: #383838;
+}
+.home .description {
+  color: white;
+  font-family: sunshine;
   text-align: center;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #333;
+  font-size: 5em;
 }
 
 .store {
@@ -188,14 +241,6 @@ header .menu i {
   padding: 10px;
 }
 
-@keyframes slideUp {
-  0% {
-    top: 100px;
-  }
-  100% {
-    top: 50px;
-  }
-}
 @media screen and (max-width: 720px) {
   header .nav {
     display: none;
