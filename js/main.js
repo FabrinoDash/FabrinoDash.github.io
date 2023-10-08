@@ -1,5 +1,7 @@
+var loader = document.getElementById('loader');
 window.addEventListener('DOMContentLoaded',()=>{
     //time config and Display
+    loader.style.display="none";
     var time = document.getElementById('time');
     setInterval(()=>{
         var message = document.getElementById('message');

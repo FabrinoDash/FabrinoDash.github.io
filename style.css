@@ -44,6 +44,7 @@ header {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  z-index: 1;
 }
 header .nav ul {
   position: relative;
@@ -248,4 +249,15 @@ header .menu i {
   header .menu {
     display: block;
   }
+}
+.loader {
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  background: white;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
