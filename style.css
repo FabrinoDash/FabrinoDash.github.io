@@ -260,4 +260,22 @@ header .menu i {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.loader .load {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgb(200, 200, 200);
+  border-radius: 50%;
+  transform: 0.1s ease-in-out;
+  border-inline-color: #333;
+  animation: load 1s 0.01s linear infinite;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
