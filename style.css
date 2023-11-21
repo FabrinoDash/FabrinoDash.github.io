@@ -26,13 +26,11 @@
 
 body {
   width: 100vw;
-  height: 100vh;
-  background: white;
+  min-height: 100vh;
+  color: white;
 }
 
-header {
-  position: sticky;
-  top: 0;
+.myHeader {
   display: flex;
   align-items: center;
   justify-content: right;
@@ -46,15 +44,11 @@ header {
           user-select: none;
   z-index: 1;
 }
-header .nav ul {
-  position: relative;
-  top: 0;
-}
-header .nav ul a {
+.myHeader .nav2 ul a {
   color: #969696;
   font-size: 1.2em;
 }
-header .nav ul a li {
+.myHeader .nav2 ul a li {
   width: 100px;
   display: inline-block;
   text-align: center;
@@ -63,31 +57,13 @@ header .nav ul a li {
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
-header .nav ul a li .sub1 {
-  display: none;
-  border-radius: 5px;
-  position: absolute;
-  top: 20px;
-  background: #0b1015;
-  box-shadow: 0 0 2px 2px #121921;
-}
-header .nav ul a li .sub1 li {
-  width: 200px;
-  margin: 2px 0;
-  padding: 10px 0;
-  display: block;
-  font-size: 0.7em;
-}
-header .nav ul a li.active {
+.myHeader .nav2 ul a li.active {
   color: white;
 }
-header .nav ul a li:hover .sub1 {
-  display: block;
-}
-header .nav ul a li:hover {
+.myHeader .nav2 ul a li:hover {
   color: white;
 }
-header .timeDiv {
+.myHeader .timeDiv {
   color: white;
   width: 100px;
   margin-right: 20px;
@@ -100,51 +76,20 @@ header .timeDiv {
   flex-direction: column;
   box-shadow: 0 0 2px 3px #121921;
 }
-header .timeDiv p#time {
+.myHeader .timeDiv p#time {
   font-weight: 900;
   font-size: 0.7em;
   font-family: tech;
   letter-spacing: 2px;
 }
-header .timeDiv p#message {
+.myHeader .timeDiv p#message {
   font-size: 0.5em;
   font-family: comfortaa;
 }
-header .nav-replace {
-  position: fixed;
-  z-index: 50;
-  transition: 0.5s ease-in;
-  top: 0;
-  right: -100%;
-  z-index: 3;
-  width: 100%;
-  height: 100vh;
-  background: black;
-}
-header .nav-replace ul a {
-  text-decoration: none;
-  position: absolute;
-}
-header .nav-replace ul a li {
-  list-style: none;
-  text-align: center;
-  padding: 20px 0;
-  margin: 10px;
-  cursor: pointer;
-  color: white;
-  border-radius: 10px;
-}
-header .nav-replace ul a .close-menu {
-  color: red;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  font-size: 1.5em;
-  background: rgb(0, 0, 0);
-}
-header .menu {
+.myHeader .menu {
   display: none;
 }
-header .menu i {
+.myHeader .menu i {
   font-size: 4em;
   color: rgb(0, 0, 0);
   margin-right: 10px;
@@ -154,18 +99,10 @@ header .menu i {
 .home {
   font-family: Arial, Helvetica, sans-serif;
 }
-.home .spacer {
-  background-color: #333;
-  height: 10px;
-}
 .home .clipped {
-  position: absolute;
-  top: 70px;
+  padding: 100px 0 20px 0;
   width: 100%;
-  height: 300px;
-  background: #333;
-  -webkit-clip-path: polygon(0% 0%, 100% 30%, 100% 100%, 0% 70%);
-          clip-path: polygon(0% 0%, 100% 30%, 100% 100%, 0% 70%);
+  min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,29 +119,29 @@ header .menu i {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .home .clipped span .tag {
   font-size: 0.9em;
   color: white;
   margin: 0 5px;
   padding: 5px 10px;
-  border-radius: 2px;
-  background: #383838;
+  border-radius: 5px;
+  background: #333;
   font-family: anja;
 }
-.home .belowClip {
-  height: 300px;
-  background: #383838;
-}
-.home .description {
-  color: white;
+.home .clipped .description {
+  color: rgb(9, 70, 9);
+  margin: auto;
   font-family: sunshine;
   text-align: center;
-  margin: 30px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
-  background: #333;
-  font-size: 5em;
+  font-size: 2em;
+}
+.home .clipped .introduction {
+  padding: 30px;
+  text-align: justify;
 }
 
 .store {

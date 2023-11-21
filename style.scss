@@ -36,12 +36,10 @@ $sunshine:sunshine;
 }
 body{
     width:100vw;
-    height:100vh;
-    background: white;
+    min-height:100vh;
+    color: white;
 }
-header{
-    position: sticky;
-    top: 0;
+.myHeader{
     display: flex;
     align-items: center;
     justify-content: right;
@@ -53,10 +51,8 @@ header{
     transition: 0.2s ease-in-out;
     user-select: none;
     z-index: 1;
-    .nav{
+    .nav2{
         ul{
-            position: relative;
-            top: 0;
             a{
                 color: #969696;
                 font-size: 1.2em;
@@ -68,27 +64,9 @@ header{
                     font-weight: 800;
                     cursor: pointer;
                     transition: 0.2s ease-in-out;
-                    .sub1{
-                        display: none;
-                        border-radius: 5px;
-                        position: absolute;
-                        top: 20px;
-                        background: #0b1015;
-                        box-shadow: 0 0 2px 2px #121921;
-                        li{
-                            width: 200px;
-                            margin: 2px 0;
-                            padding: 10px 0;
-                            display: block;
-                            font-size: 0.7em;
-                        }
-                    }
                 }
                 li.active{
                     color:white;
-                }
-                li:hover .sub1{
-                    display: block;
                 }
                 li:hover{
                     color: white;
@@ -119,43 +97,6 @@ header{
             font-family:$comfortaa;
         }
     }
-    .nav-replace{
-        position: fixed;
-        z-index: 50;
-        transition: 0.5s ease-in;
-        top: 0;
-        right: -100%;
-        z-index: 3;
-        width: 100%;
-        height: 100vh;
-        background: black;
-        ul{
-            a{
-                text-decoration: none;
-                position: absolute;
-
-                li{
-                    list-style: none;
-                    text-align: center;
-                    padding: 20px 0;
-                    margin:10px;
-                    cursor: pointer;
-                    color: white;
-                    border-radius: 10px;
-                    // .sub1{
-                    //     color: red;
-                    // }
-                }
-                .close-menu{
-                    color: red;
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-weight: 900;
-                    font-size: 1.5em;
-                    background: rgb(0, 0, 0);
-                }
-            }
-        }
-    }
     .menu{
         display: none;
         i{
@@ -168,18 +109,11 @@ header{
 }
 .home{
     font-family: Arial, Helvetica, sans-serif;
-    .spacer{
-        background-color: #333;
-        height: 10px;
-    }
     .clipped{
-        position: absolute;
-        
-        top: 70px;
+        padding: 100px 0 20px 0;
         width: 100%;
-        height: 300px;
-        background: #333;
-        clip-path: polygon(0% 0%,100% 30%,100% 100%,0% 70%);
+        min-height: 200px;
+        // clip-path: polygon(0% 0%,100% 30%,100% 100%,0% 70%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -195,30 +129,32 @@ header{
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 30px;
+
             .tag{
                 font-size: 0.9em;
                 color: white;
                 margin: 0 5px;
                 padding: 5px 10px;
-                border-radius: 2px;
-                background: #383838;
+                border-radius: 5px;
+                background: #333;
+                // background: #727272;
                 font-family: $anja;
             }
         }
-    }
-    .belowClip{
-        height: 300px;
-        background: #383838;
-    }
-    .description{
-        color: white;
-        font-family: $sunshine;
-        text-align: center;
-        margin: 30px;
-        padding: 20px;
-        border-radius: 10px;
-        background: #333;
-        font-size: 5em;
+        .description{
+            color: rgb(9, 70, 9);
+            margin: auto;
+            font-family: $sunshine;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 2em;
+        }
+        .introduction{
+            padding: 30px;
+            text-align: justify;
+        }
     }
 }
 .store{
