@@ -3,43 +3,45 @@
     src: url(./techBold.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: comfortaa;
     src: url(./fonts/comfortaa/comfortaa.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: anja-accent;
     src: url(./fonts/anja_eliane/anja-accent.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: anja;
     src: url(./fonts/anja_eliane/anja.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: sunshine;
     src: url(./fonts/sunshine_10/Sunshine.otf);
 }
 
-$font:tech;
-$comfortaa:comfortaa;
-$anja:anja;
-$anja-acent:anja-accent;
-$sunshine:sunshine;
+$font: tech;
+$comfortaa: comfortaa;
+$anja: anja;
+$anja-acent: anja-accent;
+$sunshine: sunshine;
 
-*,body{
-    padding:0;
-    margin:0;
+*,
+body {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-body{
-    width:100vw;
-    min-height:100vh;
+
+body {
+    width: 100vw;
+    min-height: 100vh;
     color: white;
 }
-.myHeader{
+.myHeader {
     display: flex;
     align-items: center;
     justify-content: right;
@@ -48,36 +50,42 @@ body{
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
     height: 70px;
     margin: auto;
-    transition: 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     user-select: none;
+    position: sticky;
+    top: 0;
     z-index: 1;
-    .nav2{
-        ul{
-            a{
+    .nav2 {
+        ul {
+            a {
                 color: #969696;
                 font-size: 1.2em;
-                li{
+
+                li {
                     width: 100px;
                     display: inline-block;
                     text-align: center;
-                    font-family:$comfortaa;
+                    font-family: $comfortaa;
                     font-weight: 800;
                     cursor: pointer;
                     transition: 0.2s ease-in-out;
                 }
-                li.active{
-                    color:white;
+
+                li.active {
+                    color: white;
                 }
-                li:hover{
+
+                li:hover {
                     color: white;
                 }
             }
         }
     }
-    .timeDiv{
+
+    .timeDiv {
         color: white;
-        width:100px;
-        margin-right:20px;
+        width: 100px;
+        margin-right: 20px;
         padding: 10px 0;
         background: #0b1015;
         border-radius: 10px;
@@ -86,20 +94,24 @@ body{
         justify-content: center;
         flex-direction: column;
         box-shadow: 0 0 2px 3px #121921;
-        p#time{
+
+        p#time {
             font-weight: 900;
             font-size: 0.7em;
             font-family: $font;
             letter-spacing: 2px;
         }
-        p#message{
+
+        p#message {
             font-size: 0.5em;
-            font-family:$comfortaa;
+            font-family: $comfortaa;
         }
     }
-    .menu{
+
+    .menu {
         display: none;
-        i{
+
+        i {
             font-size: 4em;
             color: rgb(0, 0, 0);
             margin-right: 10px;
@@ -107,9 +119,11 @@ body{
         }
     }
 }
-.home{
+
+.home {
     font-family: Arial, Helvetica, sans-serif;
-    .clipped{
+
+    .clipped {
         padding: 100px 0 20px 0;
         width: 100%;
         min-height: 200px;
@@ -118,20 +132,32 @@ body{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        h2{
+
+        h2 {
             font-size: 2em;
             font-family: $anja-acent;
             color: white;
             text-transform: uppercase;
             letter-spacing: 5px;
+            min-height: 100px;
+            position: sticky;
+            top: 70px;
+
+            background: black;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
         }
-        span{
+
+        span {
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 30px;
+            position: sticky;
+            top: 130px;
 
-            .tag{
+            .tag {
                 font-size: 0.9em;
                 color: white;
                 margin: 0 5px;
@@ -142,7 +168,8 @@ body{
                 font-family: $anja;
             }
         }
-        .description{
+
+        .description {
             color: rgb(9, 70, 9);
             margin: auto;
             font-family: $sunshine;
@@ -151,30 +178,73 @@ body{
             border-radius: 10px;
             font-size: 2em;
         }
-        .introduction{
+
+        .introduction {
             padding: 30px;
             text-align: justify;
+            font-size: 1em;
         }
     }
+    .skills{
+        // background: #120722;
+        margin: 0 30px 20px;
+        padding: 20px;
+        
+        transition: all 2s ease;
+        transform: translateY(150px);
+        opacity: 0;
+        h3{
+            text-align: center;
+            font-weight: 800;
+            padding: 20px 0;
+            font-size: 3em;
+        }
+        ul{
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                min-height: 50px;
+                background: black;
+                margin-bottom: 20px;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 5px 0px rgb(50, 50, 50);
+
+                input{
+                    width: 100px;
+                }
+            }
+        }
+    }
+    .skills.active{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
-.store{
+
+.store {
     margin: 10px;
     border-radius: 5px;
-    .title{
+
+    .title {
         text-align: center;
         padding: 5px 0;
         font-size: 1.2em;
         font-weight: 900;
     }
-    .docker-commands{
+
+    .docker-commands {
         margin-bottom: 30px;
-        .comand-desc{
+
+        .comand-desc {
             overflow: hidden;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             margin-bottom: 20px;
             background: black;
-            .command{
+
+            .command {
                 // height: 30px;
                 border-left: 10px solid rgb(0, 0, 0);
                 border-radius: 2px;
@@ -182,31 +252,34 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: start;
-                padding:10px;
+                padding: 10px;
                 color: white;
             }
-            .desc{
+
+            .desc {
                 color: white;
                 padding: 10px;
             }
         }
     }
 }
-//##### RESPONSIVE DESIGN ##### 
-@media screen and (max-width:1024px){
 
-}
-@media screen and (max-width:720px){
-    header{
-        .nav{
+//##### RESPONSIVE DESIGN ##### 
+@media screen and (max-width:1024px) {}
+
+@media screen and (max-width:720px) {
+    header {
+        .nav {
             display: none;
         }
-        .menu{
+
+        .menu {
             display: block;
         }
     }
 }
-.loader{
+
+.loader {
     position: fixed;
     width: 100vw;
     min-height: 100vh;
@@ -216,7 +289,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    .load{
+
+    .load {
         width: 50px;
         height: 50px;
         border: 5px solid rgb(200, 200, 200);
@@ -224,14 +298,16 @@ body{
         // border-top: 5px solid white ;
         transform: 0.1s ease-in-out;
         border-inline-color: #333;
-        animation: load  1s 0.01s linear infinite;
+        animation: load 1s 0.01s linear infinite;
     }
 }
+
 @keyframes load {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }

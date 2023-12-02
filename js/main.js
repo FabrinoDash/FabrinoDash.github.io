@@ -53,3 +53,19 @@ window.addEventListener('DOMContentLoaded',()=>{
         nav_replace.style.right='-100%';
     }
 });
+
+window.addEventListener("scroll",reveal);
+
+function reveal(){
+    var windowHeight = window.innerHeight;
+    
+    var skills = document.querySelector('.skills');
+    var skillsTop = skills.getBoundingClientRect().top;
+    var revealPoint = 150;
+
+    if(skillsTop < windowHeight - revealPoint){
+        skills.classList.add('active');
+    }else{
+        skills.classList.remove('active');
+    }
+}

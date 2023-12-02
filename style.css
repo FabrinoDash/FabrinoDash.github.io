@@ -18,7 +18,8 @@
   font-family: sunshine;
   src: url(./fonts/sunshine_10/Sunshine.otf);
 }
-*, body {
+*,
+body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -38,10 +39,12 @@ body {
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
   height: 70px;
   margin: auto;
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  position: sticky;
+  top: 0;
   z-index: 1;
 }
 .myHeader .nav2 ul a {
@@ -114,12 +117,21 @@ body {
   color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
+  min-height: 100px;
+  position: sticky;
+  top: 70px;
+  background: black;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
 }
 .home .clipped span {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  position: sticky;
+  top: 130px;
 }
 .home .clipped span .tag {
   font-size: 0.9em;
@@ -142,6 +154,38 @@ body {
 .home .clipped .introduction {
   padding: 30px;
   text-align: justify;
+  font-size: 1em;
+}
+.home .skills {
+  margin: 0 30px 20px;
+  padding: 20px;
+  transition: all 2s ease;
+  transform: translateY(150px);
+  opacity: 0;
+}
+.home .skills h3 {
+  text-align: center;
+  font-weight: 800;
+  padding: 20px 0;
+  font-size: 3em;
+}
+.home .skills ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+  background: black;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0px rgb(50, 50, 50);
+}
+.home .skills ul li input {
+  width: 100px;
+}
+.home .skills.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .store {
