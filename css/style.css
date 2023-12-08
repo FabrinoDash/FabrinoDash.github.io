@@ -1,0 +1,152 @@
+@font-face {
+  font-family: outfitLight;
+  src: url(../fonts/Outfit-Light.ttf);
+}
+@font-face {
+  font-family: outfitMedium;
+  src: url(../fonts/Outfit-Medium.ttf);
+}
+@font-face {
+  font-family: outfitBold;
+  src: url(../fonts/Outfit-Bold.ttf);
+}
+*, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: outfitLight;
+}
+
+body {
+  background: rgb(19, 19, 19);
+  width: 100vw;
+  transition: all 0.5s ease;
+}
+
+.starter {
+  background: black;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.starter h1 {
+  font-family: outfitBold;
+  font-size: 2em;
+  line-height: 50px;
+}
+.starter .bio {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.starter .bio::before {
+  position: absolute;
+  content: "";
+  padding: 2px;
+  width: 50px;
+  left: -60px;
+  background: white;
+}
+.starter .bio::after {
+  position: absolute;
+  content: "";
+  padding: 2px;
+  width: 50px;
+  right: -60px;
+  background: white;
+}
+.starter .loader {
+  position: relative;
+  width: 1000px;
+  margin: 10px auto;
+  height: 20px;
+  background: rgb(19, 19, 19);
+  border-radius: 2px;
+  transition: all 0.5S ease;
+}
+.starter .loader .inside {
+  position: absolute;
+  height: 100%;
+  width: 5%;
+  background: black;
+  left: 0;
+  transform: scale(0.7);
+  border-radius: 2px;
+  animation: move 2s linear 0.001s infinite;
+}
+.starter .knowledge-areas {
+  margin: 10px 0;
+}
+.starter .knowledge-areas span {
+  padding: 10px;
+  background: rgb(19, 19, 19);
+  border-radius: 5px;
+}
+
+.next {
+  padding: 30px;
+}
+
+@keyframes move {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .starter .loader {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .starter .loader {
+    width: 550px;
+  }
+  .starter .knowledge-areas span {
+    padding: 8px;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 576px) {
+  .starter h1 {
+    font-size: 1.7em;
+  }
+  .starter .bio {
+    font-size: 1em;
+  }
+  .starter .loader {
+    width: 310px;
+    height: 10px;
+  }
+  .starter .knowledge-areas {
+    margin-top: -10px;
+  }
+  .starter .knowledge-areas span {
+    font-size: 0.45em;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .starter h1 {
+    font-size: 1em;
+  }
+  .starter .bio {
+    font-size: 0.6em;
+  }
+  .starter .loader {
+    width: 250px;
+    height: 10px;
+  }
+  .starter .knowledge-areas {
+    margin-top: -10px;
+  }
+  .starter .knowledge-areas span {
+    padding: 5px;
+    font-size: 0.3em;
+  }
+}/*# sourceMappingURL=style.css.map */
