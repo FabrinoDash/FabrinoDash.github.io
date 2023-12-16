@@ -10,10 +10,21 @@
     font-family: outfitBold;
     src: url(../fonts/Outfit-Bold.ttf);
 }
+// NEXA FONTS
+@font-face {
+    font-family: nexaHeavy;
+    src: url(../assets/fonts/NexaHeavy.ttf);
+}
+@font-face {
+    font-family: nexaLight;
+    src: url(../assets/fonts/NexaLight.ttf);
+}
 //############ Fonts
 $outfitLight:outfitLight;
 $outfitMedium:outfitMedium;
 $outfitBold:outfitBold;
+$nexaheavy:nexaHeavy;
+$nexalight:nexaLight;
 //############
 
 *,body{
@@ -21,6 +32,7 @@ $outfitBold:outfitBold;
     margin: 0;
     box-sizing: border-box;
     font-family: $outfitLight;
+    scroll-behavior: smooth;
 }
 body{
     background:white;
@@ -83,7 +95,227 @@ body{
         }
     }
 }
-
+.fabrino_tech_header{
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px dotted #000428;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    .logo{
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        img{
+            width: 50px;
+        }
+        p{
+            margin-left: 10px;
+            font-size: 1em;
+            letter-spacing: 0.1px;
+            font-weight: 900;
+        }
+    }
+    .menu{
+        position: relative;
+        overflow: hidden;
+        margin-right: 10px;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        i{
+            display: block;
+            height: 10px;
+            background: linear-gradient(45deg,#000428,#004e92);
+            border-radius: 4px;
+        }
+    }
+    .navigation{
+        margin-right: 10px;
+        a{
+            text-decoration: none;
+            padding:10px;
+            color: black;
+        }
+        a.active{
+            text-decoration: underline;
+        }
+    }
+}
+.down_navigation{
+    display: none;
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 11;
+    flex-direction: column;
+    border-bottom: 2px dotted #000428;
+    padding: 10px 0;
+    transition: all 0.5s ease;
+    a{
+        text-decoration: none;
+        border-radius: 5px;
+        background: #000428;
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+}
+.container{
+    height: 200px;
+    margin:10px 30px;
+    background: linear-gradient(180deg,#004e92,#000428);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: $nexaheavy;
+    .head{
+        font-size: 4em;
+        line-height: 50px;
+    }
+    .bio{
+        font-size: 2em;
+        font-family: $nexalight;
+        font-weight: 800;
+    }
+}
+.below_clipped{
+    height: 20px;
+    margin: -7px 30px;
+    background: linear-gradient(45deg,#004e92,#000428);
+    border-radius: 5px;
+    clip-path: polygon(0% 0%,100% 0%,100% 20%,52% 20%,50% 100%,48% 20%,0% 20%,);
+}
+.logo_picture{
+    margin: 20px auto;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.services{
+    margin-top: 50px;
+    .heading{
+        color: #0f1124;
+        font-family: $nexaheavy;
+        text-align: center;
+        font-size: 4em;
+        line-height: 60px;
+    }
+    .heading:after{
+        content: '';
+        display: block;
+        width: 100px;
+        height: 10px;
+        margin: auto;
+        background: #000428;
+        border-radius: 10px;
+    }
+    .heading:hover .heading::after{
+        width: 200px;
+    }
+    .all_services{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding:0 30px;
+        .service{
+            min-width: 300px;
+            max-width: 200px;
+            min-height: 200px;
+            max-height: 200px;
+            background: pink;
+            border-radius: 10px;
+            background: linear-gradient(#004e92,#000428);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            h5{
+                text-align: center;
+                font-family: $nexaheavy;
+                color: white;
+                font-size: 1em;
+            }
+        }
+        .service:hover{
+            border: 2px solid black;
+        }
+    }
+}
+.contacts{
+    margin-top: 50px;
+    .heading{
+        color: #0f1124;
+        font-family: $nexaheavy;
+        text-align: center;
+        font-size: 4em;
+        line-height: 60px;
+    }
+    .heading:after{
+        content: '';
+        display: block;
+        width: 100px;
+        height: 10px;
+        margin: auto;
+        background: #000428;
+        border-radius: 10px;
+    }
+    .heading:hover .heading::after{
+        width: 200px;
+    }
+    .all_contact{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        .contact_container{
+            width: 500px;
+            min-height: 50px;
+            padding:16px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background:linear-gradient(to right,#004e92,#000428);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            img{
+                width: 40px;
+            }
+            .details{
+                font-size: 1.3em;
+                color: white;
+            }
+        }
+    }
+}
+.footer{
+    margin-top: 10px;
+    min-height: 50px;
+    padding: 10px;
+    border-top: 2px dotted #000428;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 // Animation
 
 //########################################
@@ -104,8 +336,32 @@ body{
             }
         }
     }
+    // FABRINO TECH PAGE
+    .services{
+        margin-top: 10px;
+        .all_services{
+            flex-direction: column;
+            padding: 0 10px;
+            .service{
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    // END OF FABRINO TECH
 }
 @media screen and (max-width:576px) {
+    // DISPLAY MENU BUTTON
+    .fabrino_tech_header{
+        .menu{
+            display: flex;
+        }
+        .navigation{
+            display: none;
+        }
+    }
+    // END OF DISPLAY MENU
     .starter{
         h1{
             font-size: 1.7em;
@@ -118,6 +374,43 @@ body{
             span{
                 font-size: 0.45em;
                 padding: 5px;
+            }
+        }
+    }
+}
+@media screen and (max-width:520px) {
+    .container{
+        margin: 10px;
+        height: 100px;
+        .head{
+            font-size: 2.5em;
+        }
+        .bio{
+            font-size: 1em;
+        }
+    }
+    .logo_picture{
+        width: 150px;
+    }
+    .services{
+        .heading{
+            font-size: 1.5em;
+        }
+    }
+    .contacts{
+        .heading{
+            font-size: 1.5em;
+        }
+        .all_contact{
+            .contact_container{
+                min-width: 95%;
+                max-width: 95%;
+                img{
+                    width: 30px;
+                }
+                .details{
+                    font-size: 0.8em;
+                }
             }
         }
     }
@@ -137,5 +430,15 @@ body{
                 font-size: 0.3em;
             }
         }
+    }
+}
+
+// SCROLL DOWN NAVIGATION
+@keyframes scroll_down {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: max-content;
     }
 }
