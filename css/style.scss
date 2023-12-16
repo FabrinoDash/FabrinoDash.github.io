@@ -20,16 +20,16 @@ $outfitBold:outfitBold;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: white;
     font-family: $outfitLight;
 }
 body{
-    background:rgb(19, 19, 19);
+    background:white;
     width: 100vw;
     transition: all 0.5s ease;
 }
 .starter{
-    background:black;
+    // background:black;
+    color: black;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -44,6 +44,7 @@ body{
         position: relative;
         display: flex;
         align-items: center;
+        margin-bottom: 10px;
     }
     .bio::before{
         position: absolute;
@@ -51,7 +52,7 @@ body{
         padding: 2px;
         width: 50px;
         left: -60px;
-        background: white;
+        background: black;
     }
     .bio::after{
         position: absolute;
@@ -59,68 +60,43 @@ body{
         padding: 2px;
         width: 50px;
         right: -60px;
-        background: white;
-    }
-
-    .loader{
-        position: relative;
-        width: 1000px;
-        margin: 10px auto;
-        height: 20px;
-        background: rgb(19, 19, 19);
-        border-radius: 2px;
-        transition: all 0.5S ease;
-
-        .inside{
-            position: absolute;
-            height: 100%;
-            width: 5%;
-            background: black;
-            left: 0;
-            transform: scale(0.7);
-            border-radius: 2px;
-            animation: move 2s linear 0.001s infinite;
-        }
+        background: black;
     }
     .knowledge-areas{
         margin: 10px 0;
         span{
             padding: 10px;
-            background: rgb(19, 19, 19);
+            // background: rgb(19, 19, 19);
+            background: linear-gradient(180deg,#000428,#004e92);
             border-radius: 5px;
+            color: white;
+        }
+    }
+    a{
+        margin: 10px 0;
+        color: white;
+        text-decoration: none;
+        .fabrino_tech{
+            background: #000428;
+            padding: 16px 32px;
+            border-radius: 10px;
         }
     }
 }
-.next{
-    padding: 30px;
-}
 
 // Animation
-@keyframes move{
-    0%{
-        left: 0%;
-    }
-    100%{
-        left: 100%;
-    }
-}
 
 //########################################
 //############# -RESPONSIVE- #############
 //########################################
 
 @media screen and (max-width:1024px) {
-    .starter{
-        .loader{
-            width: 750px;
-        }
-    }
+    // .starter{
+        
+    // }
 }
 @media screen and (max-width:768px) {
     .starter{
-        .loader{
-            width: 550px;
-        }
         .knowledge-areas{
             span{
                 padding: 8px;
@@ -136,10 +112,6 @@ body{
         }
         .bio{
             font-size: 1em;
-        }
-        .loader{
-            width: 310px;
-            height: 10px;
         }
         .knowledge-areas{
             margin-top: -10px;
@@ -157,10 +129,6 @@ body{
         }
         .bio{
             font-size: 0.6em;
-        }
-        .loader{
-            width: 250px;
-            height: 10px;
         }
         .knowledge-areas{
             margin-top: -10px;
