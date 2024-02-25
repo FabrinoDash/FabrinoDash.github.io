@@ -1,0 +1,68 @@
+*, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    width: 500px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+  }
+  .container .recordedVideo {
+    border-radius: 20px 20px 0 0;
+    background: #044283;
+    margin-bottom: 10px;
+  }
+  .container .controllers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #181328;
+  }
+  .container .controllers button {
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #044283;
+    color: white;
+    cursor: pointer;
+  }
+  .container .controllers .startBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .container .controllers .startBtn .loader {
+    display: none;
+    border: 3px solid white;
+    border-top: 3px solid transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: load 2s linear 0.01s infinite;
+  }
+  
+  @keyframes load {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }/*# sourceMappingURL=style.css.map */
