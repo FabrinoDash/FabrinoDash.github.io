@@ -40,6 +40,9 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+.starter img {
+  width: 200px;
+}
 .starter h1 {
   font-family: outfitBold;
   font-size: 2em;
@@ -76,13 +79,21 @@ body {
   border-radius: 5px;
   color: white;
 }
-.starter a {
-  margin: 10px 0;
-  color: white;
-  text-decoration: none;
+.starter .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
-.starter a .fabrino_tech {
-  background: #000428;
+.starter .links a {
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 10px;
+  color: #181328;
+}
+.starter .links a .fabrino_tech {
+  font-family: outfitBold;
+  box-shadow: 0 0 5px 0.5px #181328;
   padding: 16px 32px;
   border-radius: 10px;
 }
@@ -163,39 +174,9 @@ body {
   padding: 10px;
 }
 
-.container {
-  height: 200px;
-  margin: 10px 30px;
-  background: linear-gradient(180deg, #004e92, #000428);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: nexaHeavy;
-}
-.container .head {
-  font-size: 4em;
-  line-height: 50px;
-}
-.container .bio {
-  font-size: 2em;
-  font-family: nexaLight;
-  font-weight: 800;
-}
-
-.below_clipped {
-  height: 20px;
-  margin: -7px 30px;
-  background: linear-gradient(45deg, #004e92, #000428);
-  border-radius: 5px;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 52% 20%, 50% 100%, 48% 20%, 0% 20%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 52% 20%, 50% 100%, 48% 20%, 0% 20%);
-}
-
 .logo_picture {
-  margin: 20px auto;
+  padding-top: 70px;
+  margin: auto;
   width: 300px;
   display: flex;
   align-items: center;
@@ -203,7 +184,7 @@ body {
 }
 
 .services {
-  margin-top: 50px;
+  padding-top: 70px;
 }
 .services .heading {
   color: #0f1124;
@@ -238,9 +219,9 @@ body {
   max-width: 200px;
   min-height: 200px;
   max-height: 200px;
-  background: pink;
   border-radius: 10px;
-  background: linear-gradient(#004e92, #000428);
+  font-family: outfitBold;
+  box-shadow: 0 0 5px 0.5px #181328;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,7 +233,7 @@ body {
 .services .all_services .service h5 {
   text-align: center;
   font-family: nexaHeavy;
-  color: white;
+  color: #181328;
   font-size: 1em;
 }
 .services .all_services .service:hover {
@@ -260,7 +241,7 @@ body {
 }
 
 .contacts {
-  margin-top: 50px;
+  padding-top: 70px;
 }
 .contacts .heading {
   color: #0f1124;
@@ -357,16 +338,6 @@ body {
   }
 }
 @media screen and (max-width: 520px) {
-  .container {
-    margin: 10px;
-    height: 100px;
-  }
-  .container .head {
-    font-size: 2.5em;
-  }
-  .container .bio {
-    font-size: 1em;
-  }
   .logo_picture {
     width: 150px;
   }
