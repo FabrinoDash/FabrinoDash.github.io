@@ -21,6 +21,7 @@
     border-radius: 10px;
   }
   .container .recordedVideo {
+    border:2px solid #181328;
     border-radius: 20px 20px 0 0;
     background: #044283;
     margin-bottom: 10px;
