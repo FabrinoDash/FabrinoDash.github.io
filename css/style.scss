@@ -33,6 +33,7 @@ $nexalight:nexaLight;
     box-sizing: border-box;
     font-family: $outfitLight;
     scroll-behavior: smooth;
+    // cursor: url(../assets/images/cursor.svg);
 }
 body{
     background:white;
@@ -41,7 +42,6 @@ body{
 }
 .starter{
     // background:black;
-    color: black;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -52,8 +52,12 @@ body{
     }
     h1{
         font-family: $outfitBold;
+        text-transform: uppercase;
         font-size: 2em;
         line-height: 50px;
+        color: transparent;
+        background: linear-gradient(45deg,#181328, orange);
+        background-clip: text;
     }
     .bio{
         position: relative;
@@ -85,6 +89,7 @@ body{
             background: linear-gradient(180deg,#000428,#004e92);
             border-radius: 5px;
             color: white;
+            cursor: pointer;
         }
     }
     .links{
@@ -192,11 +197,14 @@ body{
 .services{
     padding-top: 70px;
     .heading{
-        color: #0f1124;
+        // color: #0f1124;
         font-family: $nexaheavy;
         text-align: center;
         font-size: 4em;
         line-height: 60px;
+        color: transparent;
+        background: linear-gradient(45deg,#181328, orange);
+        background-clip: text;
     }
     .heading:after{
         content: '';
@@ -204,8 +212,9 @@ body{
         width: 100px;
         height: 10px;
         margin: auto;
-        background: #000428;
+        // background: #000428;
         border-radius: 10px;
+        background: linear-gradient(315deg,#181328, orange);
     }
     .heading:hover .heading::after{
         width: 200px;
@@ -249,11 +258,14 @@ body{
 .contacts{
     padding-top: 70px;
     .heading{
-        color: #0f1124;
+        // color: #0f1124;
         font-family: $nexaheavy;
         text-align: center;
         font-size: 4em;
         line-height: 60px;
+        color: transparent;
+        background: linear-gradient(315deg,#181328, orange);
+        background-clip: text;
     }
     .heading:after{
         content: '';
@@ -261,8 +273,9 @@ body{
         width: 100px;
         height: 10px;
         margin: auto;
-        background: #000428;
+        // background: #000428;
         border-radius: 10px;
+        background: linear-gradient(45deg,#181328, orange);
     }
     .heading:hover .heading::after{
         width: 200px;

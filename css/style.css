@@ -33,7 +33,6 @@ body {
 }
 
 .starter {
-  color: black;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -45,8 +44,13 @@ body {
 }
 .starter h1 {
   font-family: outfitBold;
+  text-transform: uppercase;
   font-size: 2em;
   line-height: 50px;
+  color: transparent;
+  background: linear-gradient(45deg, #181328, orange);
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .starter .bio {
   position: relative;
@@ -78,6 +82,7 @@ body {
   background: linear-gradient(180deg, #000428, #004e92);
   border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 .starter .links {
   display: flex;
@@ -187,11 +192,14 @@ body {
   padding-top: 70px;
 }
 .services .heading {
-  color: #0f1124;
   font-family: nexaHeavy;
   text-align: center;
   font-size: 4em;
   line-height: 60px;
+  color: transparent;
+  background: linear-gradient(45deg, #181328, orange);
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .services .heading:after {
   content: "";
@@ -199,8 +207,8 @@ body {
   width: 100px;
   height: 10px;
   margin: auto;
-  background: #000428;
   border-radius: 10px;
+  background: linear-gradient(315deg, #181328, orange);
 }
 .services .heading:hover .heading::after {
   width: 200px;
@@ -244,11 +252,14 @@ body {
   padding-top: 70px;
 }
 .contacts .heading {
-  color: #0f1124;
   font-family: nexaHeavy;
   text-align: center;
   font-size: 4em;
   line-height: 60px;
+  color: transparent;
+  background: linear-gradient(315deg, #181328, orange);
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .contacts .heading:after {
   content: "";
@@ -256,8 +267,8 @@ body {
   width: 100px;
   height: 10px;
   margin: auto;
-  background: #000428;
   border-radius: 10px;
+  background: linear-gradient(45deg, #181328, orange);
 }
 .contacts .heading:hover .heading::after {
   width: 200px;
