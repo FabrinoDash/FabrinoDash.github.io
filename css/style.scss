@@ -63,7 +63,7 @@ body{
         position: relative;
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .bio::before{
         position: absolute;
@@ -93,6 +93,7 @@ body{
         }
     }
     .links{
+        margin-top: 10px;
         display: flex;
         align-items: center;
         justify-content:center;
