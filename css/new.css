@@ -1,0 +1,117 @@
+@font-face {
+  font-family: latoBlack;
+  src: url(../fonts/Lato/Lato-Black.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src: url(../fonts/Lato/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: latoRegular;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoLight;
+  src: url(../fonts/Lato/Lato-Light.ttf);
+}
+@font-face {
+  font-family: latoItalic;
+  src: url(../fonts/Lato/Lato-Italic.ttf);
+}
+*, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: latoRegular;
+  background: #ffffff;
+  color: black;
+}
+
+.content {
+  padding: 0 20px;
+  max-width: 1024px;
+  margin: 30px auto;
+}
+.content .about {
+  text-align: justify;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+.content .about .spanned {
+  font-family: latoBold;
+  color: #15625e;
+}
+.content .about .spanned a {
+  text-decoration: none;
+  color: #15625e;
+}
+.content .about .name {
+  font-weight: 900;
+  font-size: 2em;
+  font-weight: latoBlack;
+}
+.content .about .tech {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.content .about .links {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+.content .about .links i {
+  color: #15625e;
+  margin-left: 10px;
+}
+.content .about .links span {
+  margin-right: 10px;
+}
+.content .about .summary {
+  font-size: 1.3em;
+}
+.content .skills {
+  margin-bottom: 50px;
+}
+.content .skills .skills_header {
+  font-weight: 900;
+  font-size: 2em;
+  color: #15625e;
+  font-weight: latoBlack;
+  margin-bottom: 20px;
+}
+.content .skills .skills_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.content .skills .skills_container .skill {
+  min-width: 200px;
+  max-width: 200px;
+  height: 200px;
+  box-shadow: 0 0 10px 1px #15625e;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content .skills .skills_container .skill .svg img {
+  width: 100px;
+}
+.content .skills .skills_container .skill p {
+  color: #15625e;
+  font-family: latoBlack;
+  font-size: 1.3em;
+}
+.content .projects .projects_title {
+  font-weight: 900;
+  font-size: 2em;
+  color: #15625e;
+  font-weight: latoBlack;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=new.css.map */
