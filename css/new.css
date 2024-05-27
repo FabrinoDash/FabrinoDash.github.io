@@ -30,6 +30,14 @@ body {
   color: black;
 }
 
+hr {
+  background: #15625e;
+  height: 10px;
+  border: none;
+  border-radius: 2px;
+  margin: 10px 0;
+}
+
 .content {
   padding: 0 20px;
   max-width: 1024px;
@@ -50,21 +58,28 @@ body {
 }
 .content .about .name {
   font-weight: 900;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: latoBlack;
+  text-align: center;
+  margin-bottom: 10px;
 }
 .content .about .tech {
   font-size: 1.5em;
   font-weight: 600;
   margin-bottom: 10px;
+  text-align: center;
 }
 .content .about .links {
   margin-bottom: 20px;
   font-size: 1.2em;
+  text-align: center;
 }
 .content .about .links i {
   color: #15625e;
   margin-left: 10px;
+}
+.content .about .links i:nth-child(1) {
+  margin-left: 0;
 }
 .content .about .links span {
   margin-right: 10px;
@@ -81,6 +96,7 @@ body {
   color: #15625e;
   font-weight: latoBlack;
   margin-bottom: 20px;
+  text-align: center;
 }
 .content .skills .skills_container {
   display: flex;
@@ -114,4 +130,60 @@ body {
   color: #15625e;
   font-weight: latoBlack;
   margin-bottom: 20px;
+  text-align: center;
+}
+.content .projects .project {
+  background: #15625e;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.content .projects .project a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  hr {
+    margin: 5px 0;
+  }
+  .content {
+    padding: 0 10px;
+  }
+  .content .about .name {
+    font-size: 1.2em;
+    font-weight: 900;
+  }
+  .content .about .tech {
+    font-size: 1em;
+    color: red;
+  }
+  .content .about .links {
+    font-size: 0.7em;
+  }
+  .content .about .summary {
+    font-size: 1em;
+  }
+  .content .skills .skills_header {
+    font-size: 1.2em;
+  }
+  .content .skills .skills_container .skill {
+    min-width: 150px;
+    max-height: 150px;
+  }
+  .content .skills .skills_container .skill .svg img {
+    width: 50px;
+  }
+  .content .projects .projects_title {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 350px) {
+  .content .skills .skills_container .skill {
+    min-width: 100%;
+  }
+  .content .skills .skills_container .skill .svg img {
+    width: 100px;
+  }
 }/*# sourceMappingURL=new.css.map */

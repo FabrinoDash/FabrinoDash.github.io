@@ -39,6 +39,13 @@ body{
     background: $background;
     color: black;
 }
+hr{
+    background: $mainColor;
+    height: 10px;
+    border: none;
+    border-radius: 2px;
+    margin: 10px 0;
+}
 .content{
     padding: 0 20px;
     max-width: 1024px;
@@ -57,20 +64,27 @@ body{
         }
         .name{
             font-weight: 900;
-            font-size: 2em;
+            font-size: 2.5em;
             font-weight: $latoBlack;
+            text-align: center;
+            margin-bottom: 10px;
         }
         .tech{
             font-size: 1.5em;
             font-weight: 600;
             margin-bottom: 10px;
+            text-align: center;
         }
         .links{
             margin-bottom: 20px;
             font-size: 1.2em;
+            text-align: center;
             i{
                 color: $mainColor;
                 margin-left:10px;
+            }
+            i:nth-child(1){
+                margin-left: 0;
             }
             span{
                 margin-right:10px;
@@ -78,7 +92,6 @@ body{
         }
         .summary{
             font-size: 1.3em;
-
         }
     }
     .skills{
@@ -89,6 +102,7 @@ body{
             color: $mainColor;
             font-weight: $latoBlack;
             margin-bottom: 20px;
+            text-align: center;
         }
         .skills_container{
             display: flex;
@@ -130,7 +144,80 @@ body{
             color: $mainColor;
             font-weight: $latoBlack;
             margin-bottom: 20px;
+            text-align: center;
+        }
+        .project{
+            background: $mainColor;
+            padding: 10px;border-radius: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: white;
+            }
         }
     }
-    
+}
+
+@media screen and (max-width:600px) {
+    hr{
+        margin: 5px 0;
+    }
+    .content{
+        padding: 0 10px;
+        .about{
+            .name{
+                font-size: 1.2em;
+                font-weight: 900;
+            }
+            .tech{
+                font-size: 1em;
+                color: red;
+            }
+            .links{
+                font-size: 0.7em;
+            }
+            .summary{
+                font-size: 1em;
+            }
+        }
+        .skills{
+            .skills_header{
+                font-size: 1.2em;
+            }
+            .skills_container{
+                .skill{
+                    min-width: 150px;
+                    max-height: 150px;
+                    .svg{
+                        img{
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .projects{
+            .projects_title{
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:350px) {
+    .content{
+        .skills{
+            .skills_container{
+                .skill{
+                    min-width: 100%;
+                    .svg{
+                        img{
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
