@@ -43,6 +43,14 @@ hr {
   max-width: 1024px;
   margin: 30px auto;
 }
+.content .logo {
+  width: 200px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.content .logo img {
+  width: 200px;
+}
 .content .about {
   text-align: justify;
   line-height: 30px;
@@ -142,6 +150,24 @@ hr {
 .content .projects .project a {
   text-decoration: none;
   color: white;
+}
+.content .components {
+  margin-top: 30px;
+}
+.content .components .component_title {
+  font-weight: 900;
+  font-size: 2em;
+  color: #15625e;
+  font-weight: latoBlack;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.content .components span {
+  background: white;
+  box-shadow: 0 0 5px 2px #15625e;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 600px) {

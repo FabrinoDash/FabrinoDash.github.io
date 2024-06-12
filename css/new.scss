@@ -50,6 +50,14 @@ hr{
     padding: 0 20px;
     max-width: 1024px;
     margin: 30px auto;
+    .logo{
+        width: 200px;
+        margin: auto;
+        margin-bottom: 20px;
+        img{
+            width: 200px;
+        }
+    }
     .about{
         text-align: justify;
         line-height: 30px;
@@ -155,6 +163,24 @@ hr{
                 text-decoration: none;
                 color: white;
             }
+        }
+    }
+    .components{
+        margin-top: 30px;
+        .component_title{
+            font-weight: 900;
+            font-size: 2em;
+            color: $mainColor;
+            font-weight: $latoBlack;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        span{
+            background: white;
+            box-shadow: 0 0 5px 2px $mainColor;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-right: 10px;
         }
     }
 }
