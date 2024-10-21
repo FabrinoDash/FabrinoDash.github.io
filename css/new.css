@@ -1,22 +1,6 @@
 @font-face {
-  font-family: latoBlack;
-  src: url(../fonts/Lato/Lato-Black.ttf);
-}
-@font-face {
-  font-family: latoBold;
-  src: url(../fonts/Lato/Lato-Bold.ttf);
-}
-@font-face {
-  font-family: latoRegular;
-  src: url(../fonts/Lato/Lato-Regular.ttf);
-}
-@font-face {
-  font-family: latoLight;
-  src: url(../fonts/Lato/Lato-Light.ttf);
-}
-@font-face {
-  font-family: latoItalic;
-  src: url(../fonts/Lato/Lato-Italic.ttf);
+  font-family: abel;
+  src: url(../fonts/Abel/abel.ttf);
 }
 *, body {
   padding: 0;
@@ -25,7 +9,7 @@
 }
 
 body {
-  font-family: latoRegular;
+  font-family: abel;
   background: #ffffff;
   color: black;
 }
@@ -57,7 +41,7 @@ hr {
   margin-bottom: 50px;
 }
 .content .about .spanned {
-  font-family: latoBold;
+  font-family: abel;
   color: #15625e;
 }
 .content .about .spanned a {
@@ -129,7 +113,7 @@ hr {
 }
 .content .skills .skills_container .skill p {
   color: #15625e;
-  font-family: latoBlack;
+  font-family: abel;
   font-size: 1.3em;
 }
 .content .projects .projects_title {

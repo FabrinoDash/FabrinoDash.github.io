@@ -1,22 +1,27 @@
+// @font-face {
+//     font-family: latoBlack;
+//     src: url(../fonts/Lato/Lato-Black.ttf);
+// }
+// @font-face {
+//     font-family: latoBold;
+//     src: url(../fonts/Lato/Lato-Bold.ttf);
+// }
+// @font-face {
+//     font-family: latoRegular;
+//     src: url(../fonts/Lato/Lato-Regular.ttf);
+// }
+// @font-face {
+//     font-family: latoLight;
+//     src: url(../fonts/Lato/Lato-Light.ttf);
+// }
+// @font-face {
+//     font-family: latoItalic;
+//     src: url(../fonts/Lato/Lato-Italic.ttf);
+// }
+
 @font-face {
-    font-family: latoBlack;
-    src: url(../fonts/Lato/Lato-Black.ttf);
-}
-@font-face {
-    font-family: latoBold;
-    src: url(../fonts/Lato/Lato-Bold.ttf);
-}
-@font-face {
-    font-family: latoRegular;
-    src: url(../fonts/Lato/Lato-Regular.ttf);
-}
-@font-face {
-    font-family: latoLight;
-    src: url(../fonts/Lato/Lato-Light.ttf);
-}
-@font-face {
-    font-family: latoItalic;
-    src: url(../fonts/Lato/Lato-Italic.ttf);
+    font-family: abel;
+    src: url(../fonts/Abel/abel.ttf);
 }
 
 
@@ -25,6 +30,7 @@ $latoBold: latoBold;
 $latoRegular: latoRegular;
 $latoLight: latoLight;
 $latoItalic: latoItalic;
+$abel: abel;
 
 $mainColor: #15625e;
 $background: #ffffff;
@@ -35,7 +41,8 @@ $background: #ffffff;
     box-sizing: border-box;
 }
 body{
-    font-family: $latoRegular;
+    // font-family: $latoRegular;
+    font-family: $abel;
     background: $background;
     color: black;
 }
@@ -63,7 +70,8 @@ hr{
         line-height: 30px;
         margin-bottom: 50px;
         .spanned{
-            font-family: $latoBold;
+            // font-family: $latoBold;
+            font-family: $abel;
             color: $mainColor;
             a{
                 text-decoration: none;
@@ -137,7 +145,8 @@ hr{
                 }
                 p{
                     color: $mainColor;
-                    font-family: $latoBlack;
+                    // font-family: $latoBlack;
+                    font-family: $abel;
                     font-size: 1.3em;
                 }
             }
