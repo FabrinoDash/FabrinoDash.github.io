@@ -42,6 +42,7 @@ hr {
 }
 .content .about .spanned {
   font-family: abel;
+  font-weight: 800;
   color: #15625e;
 }
 .content .about .spanned a {
@@ -51,20 +52,24 @@ hr {
 .content .about .name {
   font-weight: 900;
   font-size: 2.5em;
-  font-weight: latoBlack;
+  font-weight: abel;
   text-align: center;
   margin-bottom: 10px;
 }
 .content .about .tech {
   font-size: 1.5em;
   font-weight: 600;
+  font-family: abel;
   margin-bottom: 10px;
   text-align: center;
 }
 .content .about .links {
   margin-bottom: 20px;
   font-size: 1.2em;
+  font-family: abel;
   text-align: center;
+  font-weight: 600;
+  color: #15625e;
 }
 .content .about .links i {
   color: #15625e;
@@ -78,15 +83,16 @@ hr {
 }
 .content .about .summary {
   font-size: 1.3em;
+  font-weight: 500;
 }
 .content .skills {
   margin-bottom: 50px;
 }
 .content .skills .skills_header {
-  font-weight: 900;
   font-size: 2em;
   color: #15625e;
-  font-weight: latoBlack;
+  font-weight: 900;
+  font-family: abel;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -106,6 +112,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 800;
   flex-direction: column;
 }
 .content .skills .skills_container .skill .svg img {
@@ -142,16 +149,26 @@ hr {
   font-weight: 900;
   font-size: 2em;
   color: #15625e;
-  font-weight: latoBlack;
+  font-family: abel;
   margin-bottom: 20px;
   text-align: center;
 }
-.content .components span {
+.content .components .played {
+  text-align: center;
+  align-items: center;
+}
+.content .components .played a {
+  text-decoration: none;
+  color: #15625e;
+}
+.content .components .played a span {
   background: white;
   box-shadow: 0 0 5px 2px #15625e;
   padding: 10px 20px;
   border-radius: 20px;
   margin-right: 10px;
+  font-weight: 900;
+  width: 100px;
 }
 
 @media screen and (max-width: 600px) {

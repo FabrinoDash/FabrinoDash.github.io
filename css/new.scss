@@ -72,6 +72,7 @@ hr{
         .spanned{
             // font-family: $latoBold;
             font-family: $abel;
+            font-weight: 800;
             color: $mainColor;
             a{
                 text-decoration: none;
@@ -81,20 +82,24 @@ hr{
         .name{
             font-weight: 900;
             font-size: 2.5em;
-            font-weight: $latoBlack;
+            font-weight: $abel;
             text-align: center;
             margin-bottom: 10px;
         }
         .tech{
             font-size: 1.5em;
             font-weight: 600;
+            font-family: $abel;
             margin-bottom: 10px;
             text-align: center;
         }
         .links{
             margin-bottom: 20px;
             font-size: 1.2em;
+            font-family: $abel;
             text-align: center;
+            font-weight: 600;
+            color: $mainColor;
             i{
                 color: $mainColor;
                 margin-left:10px;
@@ -108,15 +113,16 @@ hr{
         }
         .summary{
             font-size: 1.3em;
+            font-weight: 500;
         }
     }
     .skills{
         margin-bottom: 50px;
         .skills_header{
-            font-weight: 900;
             font-size: 2em;
             color: $mainColor;
-            font-weight: $latoBlack;
+            font-weight: 900;
+            font-family: $abel;
             margin-bottom: 20px;
             text-align: center;
         }
@@ -136,6 +142,7 @@ hr{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                font-weight: 800;
                 flex-direction: column;
 
                 .svg{
@@ -180,16 +187,26 @@ hr{
             font-weight: 900;
             font-size: 2em;
             color: $mainColor;
-            font-weight: $latoBlack;
+            font-family: $abel;
             margin-bottom: 20px;
             text-align: center;
         }
-        span{
-            background: white;
-            box-shadow: 0 0 5px 2px $mainColor;
-            padding: 10px 20px;
-            border-radius: 20px;
-            margin-right: 10px;
+        .played{
+            text-align: center;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: $mainColor;
+                span{
+                    background: white;
+                    box-shadow: 0 0 5px 2px $mainColor;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    margin-right: 10px;
+                    font-weight: 900;
+                    width: 100px;
+                }
+            }
         }
     }
 }
