@@ -1,24 +1,3 @@
-// @font-face {
-//     font-family: latoBlack;
-//     src: url(../fonts/Lato/Lato-Black.ttf);
-// }
-// @font-face {
-//     font-family: latoBold;
-//     src: url(../fonts/Lato/Lato-Bold.ttf);
-// }
-// @font-face {
-//     font-family: latoRegular;
-//     src: url(../fonts/Lato/Lato-Regular.ttf);
-// }
-// @font-face {
-//     font-family: latoLight;
-//     src: url(../fonts/Lato/Lato-Light.ttf);
-// }
-// @font-face {
-//     font-family: latoItalic;
-//     src: url(../fonts/Lato/Lato-Italic.ttf);
-// }
-
 @font-face {
     font-family: abel;
     src: url(../fonts/Abel/abel.ttf);
@@ -33,12 +12,13 @@ $latoItalic: latoItalic;
 $abel: abel;
 
 $mainColor: #15625e;
-$background: #ffffff;
+$background: #1f1f1f;
 
 *,body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 body{
     // font-family: $latoRegular;
@@ -69,6 +49,7 @@ hr{
         text-align: justify;
         line-height: 30px;
         margin-bottom: 50px;
+        color: white;
         .spanned{
             // font-family: $latoBold;
             font-family: $abel;
@@ -137,7 +118,7 @@ hr{
                 min-width: 200px;
                 max-width: 200px;
                 height: 200px;
-                box-shadow:0 0 10px 1px $mainColor;
+                box-shadow:0 0 5px 0.2px $mainColor;
                 border-radius: 10px;
                 display: flex;
                 align-items: center;
@@ -198,7 +179,7 @@ hr{
                 text-decoration: none;
                 color: $mainColor;
                 span{
-                    background: white;
+                    background: $background;
                     box-shadow: 0 0 5px 2px $mainColor;
                     padding: 10px 20px;
                     border-radius: 20px;

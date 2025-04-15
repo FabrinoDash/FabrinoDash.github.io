@@ -6,11 +6,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
   font-family: abel;
-  background: #ffffff;
+  background: #1f1f1f;
   color: black;
 }
 
@@ -39,6 +42,7 @@ hr {
   text-align: justify;
   line-height: 30px;
   margin-bottom: 50px;
+  color: white;
 }
 .content .about .spanned {
   font-family: abel;
@@ -107,7 +111,7 @@ hr {
   min-width: 200px;
   max-width: 200px;
   height: 200px;
-  box-shadow: 0 0 10px 1px #15625e;
+  box-shadow: 0 0 5px 0.2px #15625e;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -162,7 +166,7 @@ hr {
   color: #15625e;
 }
 .content .components .played a span {
-  background: white;
+  background: #1f1f1f;
   box-shadow: 0 0 5px 2px #15625e;
   padding: 10px 20px;
   border-radius: 20px;
