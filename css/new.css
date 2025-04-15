@@ -13,7 +13,7 @@
 
 body {
   font-family: abel;
-  background: #1f1f1f;
+  background: #0e1017;
   color: black;
 }
 
@@ -166,7 +166,7 @@ hr {
   color: #15625e;
 }
 .content .components .played a span {
-  background: #1f1f1f;
+  background: #0e1017;
   box-shadow: 0 0 5px 2px #15625e;
   padding: 10px 20px;
   border-radius: 20px;
